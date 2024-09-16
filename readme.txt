@@ -1,0 +1,26 @@
+About ansible
+
+Ansible is configuration managenment tool can connect any of sysytem externally and can perform the tasks
+also we can say this alsp
+
+Ansible is an open-source automation tool, or platform, used for IT tasks such as configuration management, application deployment, intraservice orchestration,....
+
+ansible developed in phython and ansible is agent less and ansible push based arechitechture follows
+
+what is pull and push
+
+pull--every time we need to check (agrent need to install in server)any configuration changed in server
+because of this we have more traffic and power and  band with and resources
+
+in push--everythinsg is saved
+
+Ansible advantages
+
+Agentless. An agentless architecture is one of top Ansible advantages. ...
+Simplicity. Using YAML syntax has one of key ansible advantages, which is human-readable and easy to understand. ...
+Flexibility. ...
+Idempotency. ...
+Scalability. ...
+Community and Ecosystem. ...
+Integration. ...
+Declarative Nature.
