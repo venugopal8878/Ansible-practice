@@ -10,7 +10,7 @@
    - name:
      ansible.builtin.service:
       name: nginx
-      state: started
+      state: stopped
       enabled: yes
 
 # - name: nginx install and run
