@@ -3,15 +3,15 @@
   connection : local
  #become: yes # run with sudo access
   tasks: 
-  - name: 
+   - name: install nginx
      ansible.builtin.package:
       name: nginx
       state: present
-  - name:
-    ansible.builtin.service:
-     name: nginx
-     state: started
-     enabled: yes
+   - name:
+     ansible.builtin.service:
+      name: nginx
+      state: started
+      enabled: yes
 
 # - name: nginx install and run
 #   hosts: web
