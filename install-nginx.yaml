@@ -1,8 +1,8 @@
--name: 
-hosts: local
-connection: local
+-name : 
+ hosts : local
+ connection : local
  #become: yes # run with sudo access
-tasks: 
+ tasks: 
   -name: 
    ansible.builtin.package:
     name: nginx
