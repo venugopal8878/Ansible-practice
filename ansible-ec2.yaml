@@ -10,7 +10,7 @@
     - backend
     - frontend
    zone: venuportal.online
-   tasks:
+  tasks:
     - name: ansible to install boto3 and botocore
       ansible.builtin.pip:
        name:
