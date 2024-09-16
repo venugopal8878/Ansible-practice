@@ -24,6 +24,7 @@
     - name: read the output 
       ansible.builtin.debug:
        msg: "the output {{ ec2_instances }}"
+
     - name: created route53 using ip address
       amazon.aws.route53:
        name: crate route53 records
@@ -34,5 +35,5 @@
        ttl: 1
        value: "{{ item.instances[0].private_ip_address  }}" #get the ip address from the reults
        wait: true
-       overwrite: true #if we have alredy records it will override 
+       #overwrite: true #if we have alredy records it will override 
       loop: "{{ ec2_instances.results }}"
