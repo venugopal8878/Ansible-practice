@@ -1,7 +1,6 @@
 -name: ping the server
-hosts: web
-become: yes #sudo user
-vars:
-tasks:
+ hosts: local
+ connection: local #sudo user
+ tasks:
   -name: ping the server
    ansible.builtin.ping:
