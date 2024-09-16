@@ -1,7 +1,7 @@
 -name: install nginx
  hosts: local
  connection: local
- become: yes # run with sudo access
+ #become: yes # run with sudo access
  tasks: 
   -name: install nginx
    ansible.builtin.package:
