@@ -4,7 +4,7 @@
  #become: yes # run with sudo access
   tasks: 
   - name: 
-    ansible.builtin.package:
+     ansible.builtin.package:
       name: nginx
     state: present
   - name:
