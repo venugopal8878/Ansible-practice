@@ -9,6 +9,7 @@
     - mysql
     - backend
     - frontend
+   zone: venuportal.online
   tasks:
     - name: create ec2 instance
       amazon.aws.ec2_instance:
@@ -23,3 +24,15 @@
     - name: read the output 
       ansible.builtin.debug:
        msg: "the output {{ ec2_instances }}"
+    - name: created route53 using ip address
+      ansible.aws.route53:
+       name: crate route53 records
+       state: present
+       zone: "{{ zone }}"
+       record: "{{item.item}}.{{ zone }}" # get the name for the dns ex musql.venuportal.online
+       type: A 
+       ttl: 1
+       value: "{{ item.instances[0].private_ip_address #get the ip address from the reults }}"
+       wait: true
+       overwrite: true #if we have alredy records it will override 
+      loop: "{{ ec2_instances.results }}"
