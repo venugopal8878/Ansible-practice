@@ -19,3 +19,7 @@
        image_id: "{{ami_id}}"
       loop: "{{instances}}"
       register: ec2_instances
+
+    - name: read the output 
+      ansible.builtin.command:
+       msg: "the output {{ ec2_instances }}"
