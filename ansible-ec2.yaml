@@ -31,15 +31,26 @@
       ansible.builtin.debug:
        msg: "the output {{ ec2_instances }}"
 
-    - name: created route53 using ip address
+    # - name: created route53 using ip address
+    #   amazon.aws.route53:
+    #    name: crate route53 records
+    #    state: present
+    #    zone: "{{ zone }}"
+    #    record: "{{item.item}}.{{ zone }}" # get the name for the dns ex musql.venuportal.online
+    #    type: A 
+    #    ttl: 1
+    #    value: "{{ item.instances[0].private_ip_address  }}" #get the ip address from the reults
+    #    wait: true
+    #    #overwrite: true #if we have alredy records it will override 
+    #   loop: "{{ ec2_instances.results }}"
+    - name: create r53 private records
       amazon.aws.route53:
-       name: crate route53 records
        state: present
        zone: "{{ zone }}"
-       record: "{{item.item}}.{{ zone }}" # get the name for the dns ex musql.venuportal.online
-       type: A 
+       record: "{{ item.item }}.{{ zone }}" #mysql.daws81s.online
+       type: A
        ttl: 1
-       value: "{{ item.instances[0].private_ip_address  }}" #get the ip address from the reults
+       value: "{{ item.instances[0].private_ip_address }}"
        wait: true
-       #overwrite: true #if we have alredy records it will override 
+       overwrite: true
       loop: "{{ ec2_instances.results }}"
