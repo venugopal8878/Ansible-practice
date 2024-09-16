@@ -1,6 +1,6 @@
 -name: ping the server
- hosts: local
- connection: local #sudo user
- tasks:
-  -name: ping the server
-   ansible.builtin.ping:
+  hosts: local
+  connection: local #sudo user
+  tasks:
+   -name: ping the server
+    ansible.builtin.ping:
