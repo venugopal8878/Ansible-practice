@@ -1,4 +1,4 @@
--name: install nginx
+-name: 
 hosts: local
 connection: local
  #become: yes # run with sudo access
