@@ -32,7 +32,7 @@
        record: "{{item.item}}.{{ zone }}" # get the name for the dns ex musql.venuportal.online
        type: A 
        ttl: 1
-       value: "{{ item.instances[0].private_ip_address #get the ip address from the reults }}"
+       value: "{{ item.instances[0].private_ip_address  }}" #get the ip address from the reults
        wait: true
        overwrite: true #if we have alredy records it will override 
       loop: "{{ ec2_instances.results }}"
