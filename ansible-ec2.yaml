@@ -6,9 +6,9 @@
    sg_id: sg-0ad172ae2652efe40
    ami_id: ami-09c813fb71547fc4f
    instances:
-    -mysql
-    -backend
-    -frontend
+    - mysql
+    - backend
+    - frontend
   tasks:
     - name: create ec2 instance
       amazon.aws.ec2_instance:
