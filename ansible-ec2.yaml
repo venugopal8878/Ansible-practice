@@ -25,7 +25,7 @@
       ansible.builtin.debug:
        msg: "the output {{ ec2_instances }}"
     - name: created route53 using ip address
-      ansible.aws.route53:
+      amazon.aws.route53:
        name: crate route53 records
        state: present
        zone: "{{ zone }}"
