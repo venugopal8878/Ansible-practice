@@ -1,15 +1,14 @@
 - name: 
   hosts: web
-  #connection : local
+  #connection : tes for local
   become: yes # run with sudo access
   tasks: 
    - name: install nginx
-     ansible.builtin.package:
+     ansible.builtin.package: #all distributions if we know distribution we can use ansible command and like dnf or apt
       name: nginx
       state: present
    - name:
      ansible.builtin.service:
       name: nginx
-      state: stopped
+      state: started
       enabled: yes
-
