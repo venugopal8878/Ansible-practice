@@ -1,0 +1,11 @@
+- name:
+  hosts: [web]  #mention the inventory ini file
+  become: yes
+  vars:
+    couser: "devops"
+    learner: "venugopal"
+    trainer: "siva"
+  tasks:
+   - name:
+     ansible.builtin.debug:
+      msg: "i am {{ learner }}, learning {{ devops }}, from the {{ trainer}}"
