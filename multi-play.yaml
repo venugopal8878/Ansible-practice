@@ -1,0 +1,6 @@
+- name: 
+  hosts:
+  tasks:
+    ansible.builtin.debug:
+     - name: multi-play
+       msg: "hi i am started learning devops"
