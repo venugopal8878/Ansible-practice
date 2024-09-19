@@ -1,6 +1,6 @@
 - name: play1
   hosts: [local]
-  connection: yes
+  connection: local
   tasks:
    - name: multi-play
      ansible.builtin.debug:
