@@ -9,14 +9,14 @@
   tasks:
    - name:
      ansible.builtin.debug:
-      msg: " iam {{ learner }}, learning {{ course }}, with {{ trainer }}"
+      msg: " iam {{ learner }} learning {{ course }} with {{ trainer }}"
 
    - name:
      vars:
        play: "task level"
        course: "ansible"
      ansible.builtin.debug:
-      msg: " i am {{ learner }}, learning the {{ play }}, in {{ course }}"
+      msg: " i am {{ learner }} learning the {{ play }} in {{ course }}"
     
    - name: # print the msg again again 
      ansible.builtin.debug:
