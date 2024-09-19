@@ -1,0 +1,13 @@
+- name: # get the input from the user using prompt
+  hosts: [web]
+  vars:
+   - name: course
+     prompt : enter the course name
+   - name: trainer
+     prompt: enter the trainer name
+   - name: learner
+     prompt: enter the learner name
+  tasks: 
+   - name: 
+     ansible.builtin.debug:
+      msg: "i am {{learner}} learning the {{ course }} with {{ trainer }}"
