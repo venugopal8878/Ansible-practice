@@ -1,5 +1,5 @@
 - name:
-  host: [wed]
+  host: [web]
   tasks:
    - name: #passing the variables from command line
      ansible.builtin.package:
