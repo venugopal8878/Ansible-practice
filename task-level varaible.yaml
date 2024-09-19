@@ -15,7 +15,7 @@
      vars:
        play: "task level"
        course: "ansible"
-     ansible.builtin.package:
+     ansible.builtin.debug:
       msg: " i am {{ learner }}, learning the {{ play }}, in {{ course }}"
     
    - name: # print the msg again again 
