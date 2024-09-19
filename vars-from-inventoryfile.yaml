@@ -2,5 +2,5 @@
   hosts: [web]
   tasks:
    - name:
-     ansible.builtin.package:
+     ansible.builtin.debug:
       msg: " i am {{ learner }} larning the {{ course }} with {{ trainer }}"
