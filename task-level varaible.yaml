@@ -16,8 +16,8 @@
        play: "task level"
        course: "ansible"
      ansible.builtin.package:
-      msg: " i am {{ learner }}, learning the {{ play }}, {{ usage }} in {{ course }}"
+      msg: " i am {{ learner }}, learning the {{ play }}, in {{ course }}"
     
    - name: # print the msg again again 
      ansible.builtin.debug:
-      msg: "i am {{ learner}} from the {{ course }}"
+      msg: "i am {{ learner}} laerning  the {{ course }}"
