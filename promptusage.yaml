@@ -1,7 +1,7 @@
 - name: # get the input from the user using prompt
   hosts: [local]
   connection: local
-  vars:
+  vars_prompt:
    - name: course
      prompt : enter the course name
    - name: trainer
