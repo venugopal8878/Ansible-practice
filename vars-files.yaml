@@ -6,4 +6,4 @@
   tasks:
    - name:
      ansible.builtin.debug:
-       msg: "i am {{ learner }} learning {{ course }} with {{ tariner }}"
+       msg: "i am {{ learner }} learning {{ course }} with {{ trainer }}"
