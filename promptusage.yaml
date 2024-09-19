@@ -10,4 +10,4 @@
   tasks: 
    - name: 
      ansible.builtin.debug:
-      msg: "i am {{learner}} learning the {{ course }} with {{ trainer }}"
+      msg: "i am {{ learner }} learning the {{ course }} with {{ trainer }}"
