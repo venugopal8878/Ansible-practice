@@ -1,9 +1,9 @@
 - name: #fectch the varaibles from vars file
-  hosts: [web]
+  hosts: [local]
+  connection: local
   vars_files:
    - vars.yaml
   tasks:
    - name:
      ansible.builtin.debug:
        msg: "i am {{ learner }}, learning {{ course }},with {{ tariner }}"
-       

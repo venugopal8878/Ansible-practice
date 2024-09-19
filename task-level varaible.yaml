@@ -1,5 +1,6 @@
 - name: task level variables
-  hosts: [web]
+  hosts: [local]
+  connection: local
   vars:
    course: "devops"
    trainer: "siva"
