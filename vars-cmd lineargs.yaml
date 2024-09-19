@@ -5,3 +5,12 @@
    - name: #passing the variables from command line
      ansible.builtin.debug:
       msg: "Hi {{ Name }} welcome to the {{ coursename }}"
+
+
+# varaible preference mostlys is command line is prefered
+# command line/args
+# play level
+# task level
+# files
+# inventory.ini
+# roles
