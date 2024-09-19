@@ -1,0 +1,6 @@
+- name:
+  host: [wed]
+  tasks:
+   - name: #passing the variables from command line
+     ansible.builtin.package:
+      msg: "Hi {{ name }} welcome to the {{ coursename }}"
