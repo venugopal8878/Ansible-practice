@@ -1,5 +1,5 @@
 - name:
-  host: [local]
+  hosts: [local]
   connection: local
   tasks:
    - name: #passing the variables from command line
