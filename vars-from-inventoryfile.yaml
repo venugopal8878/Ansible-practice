@@ -1,0 +1,6 @@
+- name: #variable from inventory file mentoin like web:vars
+  hosts: [web]
+  tasks:
+   - name:
+     ansible.builtin.package:
+      msg: " i am {{ learner }} larning the {{ course }} with {{ trainer }}"
