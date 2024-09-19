@@ -7,5 +7,5 @@
       msg: "hi i am started learning devops"
 
    - name: play2
-     ansible.buildin.debug:
+     ansible.builtin.debug:
       msg: "ansible multi play example"
