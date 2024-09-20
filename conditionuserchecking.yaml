@@ -5,7 +5,7 @@
    - name: #every usage may be we don't have ansible module so we use below command for the own command
      ansible.builtin.command: id expense
      register: user 
-     ignore_erros: true
+     ignore_errors: true
 
    - name: # print the user information
      ansible.builtin.debug:
