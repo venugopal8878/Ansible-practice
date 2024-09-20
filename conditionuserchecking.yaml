@@ -11,3 +11,6 @@
      ansible.builtin.debug:
       msg: " {{ user }}"
       
+   - name: # crate user if not exists
+     ansible.builtin.command: useradd expense
+     when: user.rc != o
