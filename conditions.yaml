@@ -8,9 +8,9 @@
    - name: 
      ansible.builtin.debug:
       msg: "the given {{ my_number }} is less than 20 "
-     when: my_number | my_number < 20
+     when: my_number | int < 20
 
    - name: # second task
      ansible.builtin.debug:
       msg: "the given {{ my_number }} is greater than 20 "
-     when: my_number | my_number > 20
+     when: my_number | int > 20
