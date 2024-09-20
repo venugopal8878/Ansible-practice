@@ -1,0 +1,20 @@
+- name: 
+  hosts: [local]
+  connection: local
+  vars:
+    course: "learning devops"
+    duration: 120
+    topic:  #list
+     - linux
+     - ansible
+     - terraform
+    live: true
+    tools: #map or dictonary
+     ci: jenkins
+     cm: ansible
+     cloud: azure
+  tasks:
+   - name: #datatypes using 
+     ansible.builtin.debug:
+      msg: " i am {{ course }} duration {{ duration }}{{ topic }} {{ live }} {{ tools }} "
+    
