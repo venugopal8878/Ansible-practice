@@ -9,8 +9,8 @@
 
    - name: # print the user information
      ansible.builtin.debug:
-      msg: " {{ user }}"
+      msg: "{{ user }}"
       
    - name: # crate user if not exists
      ansible.builtin.command: useradd expense
-     when: user.rc != o
+     when: user.rc != 0
