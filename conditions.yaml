@@ -4,6 +4,7 @@
   vars_prompt:
    - name: my_number
      prompt: enter the number #taken input from user
+     private: false #if not confidential
   tasks:
    - name: 
      ansible.builtin.debug:
