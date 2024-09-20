@@ -1,5 +1,5 @@
 - name: #install nginx for specific distrinution by checking the gathering facts convert to json
-  hosts: [loacl]
+  hosts: [local]
   connection: local
   tasks:
    - name:
