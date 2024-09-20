@@ -2,15 +2,15 @@
   hosts: [local]
   connection: local
   vars_prompt:
-   - name: number
+   - name: my_number
      prompt: enter the number #taken input from user
   tasks:
    - name: 
      ansible.builtin.debug:
-      msg: "the given {{ number }} is less than 20 "
-     when: number | number < 20
+      msg: "the given {{ my_number }} is less than 20 "
+     when: my_number | my_number < 20
 
    - name: # second task
      ansible.builtin.debug:
-      msg: "the given {{ number }} is greater than 20 "
-     when: number | number > 20
+      msg: "the given {{ my_number }} is greater than 20 "
+     when: my_number | my_number > 20
