@@ -1,0 +1,18 @@
+- name: #install nginx for specific distrinution by checking the gathering facts convert to json
+  hosts: [loacl]
+  connection: local
+  tasks:
+   - name:
+     ansible.builtin.command:
+      msg: "{{ ansible_facts }}"
+
+   - name:
+     ansible.builtin.dnf: #for redhat servrs any instllation 
+      name: nginx
+      state: present
+     when: ansible_os_family = "Redhat"
+   - name:
+     ansible.builtin.apt: #install nginx if it is debian server
+      name: nginx
+      state: present
+     when: ansible_os_family = "Debian"
