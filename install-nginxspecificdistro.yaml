@@ -3,7 +3,7 @@
   connection: local
   tasks:
    - name:
-     ansible.builtin.command:
+     ansible.builtin.debug:
       msg: "{{ ansible_facts }}"
 
    - name:
