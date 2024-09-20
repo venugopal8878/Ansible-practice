@@ -1,0 +1,12 @@
+- name: #using conditions check the user there are not
+  hosts: [local]
+  connection: local
+  tasks:
+   - name: #every usage may be we don't have ansible module so we use below command for the own command
+     ansible.builtin.command: id expense
+     register: user 
+
+   - name: # print the user information
+     ansible.builtin.debug:
+      msg: " {{ user }}"
+      

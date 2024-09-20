@@ -1,0 +1,16 @@
+- name: #using conditions
+  hosts: [local]
+  connection: local
+  vars_prompt:
+   - name: number
+     prompt: enter the number #taken input from user
+  tasks:
+   - name: 
+     ansible.builtin.debug:
+      msg: "the given {{ number }} is less than 20 "
+     when: number | number < 20
+
+   - name: # second task
+     ansible.builtin.debug:
+      msg: "the given {{ number }} is greater than 20 "
+     when: number | number > 20
