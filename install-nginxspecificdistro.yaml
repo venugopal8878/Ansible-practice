@@ -10,9 +10,9 @@
      ansible.builtin.dnf: #for redhat servrs any instllation 
       name: nginx
       state: present
-     when: ansible_os_family = "Redhat"
+     when: ansible_os_family == "Redhat"
    - name:
      ansible.builtin.apt: #install nginx if it is debian server
       name: nginx
       state: present
-     when: ansible_os_family = "Debian"
+     when: ansible_os_family == "Debian"
