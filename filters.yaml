@@ -1,0 +1,31 @@
+- name: #demo of using filters
+  hosts: [local]
+  connection: local
+  tasks:
+   - name: #default value
+      ansibl.builtin.debug:
+       msg: "{{ course | default ('ansible')}}"
+
+   - name: #uppercase
+     vars:
+      name: "venu"
+     ansibel.builtin.debug:
+      msg: "{{ name | upper }}"
+
+   - name: #lowercase
+     vars:
+      name: "VENU"
+     ansible.builtin.package:
+      msg: "{{ name | lower }}"
+
+   - name: #unique number
+     vars:
+      number: [1,23,2,3,3,33,3]
+     ansibel.builtin.debug:
+      msg: "{{ number | unique }}"
+   - name: #,min and max
+     vars:
+      number: [11,23,45,66,777,6]
+     ansibel.builtin.debug:
+      msg: "{{ number | max }} and {{ number | min }}"
+      
