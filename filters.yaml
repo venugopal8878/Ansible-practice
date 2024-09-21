@@ -3,13 +3,13 @@
   connection: local
   tasks:
    - name: #default value
-      ansibl.builtin.debug:
+      ansible.builtin.debug:
        msg: "{{ course | default ('ansible')}}"
 
    - name: #uppercase
      vars:
       name: "venu"
-     ansibel.builtin.debug:
+     ansible.builtin.debug:
       msg: "{{ name | upper }}"
 
    - name: #lowercase
@@ -26,12 +26,12 @@
    - name: #,min and max
      vars:
       number: [11,23,45,66,777,6]
-     ansibel.builtin.debug:
+     ansible.builtin.debug:
       msg: "{{ number | max }} and {{ number | min }}"
    - name: #dic2items
      vars:
       course: "devops with siva"
-     ansibel.builtin.debug:
+     ansible.builtin.debug:
       msg: "{{ course | dict2items }}"
    - name: convert list to map
   vars:
