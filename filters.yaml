@@ -1,10 +1,11 @@
-- name: demo     #demo of using filters
-  hosts: [local]
+- name: demo on filters/functions
+  hosts: local
   connection: local
   tasks:
-   - name: #default value
-     ansible.builtin.debug:
-       msg: "{{ course | default ('ansible') }}"
+  - name: print the default variable
+    ansible.builtin.debug:
+      msg: "Hello {{ course | default('Ansible') }}"
+  
 
   #  - name: #uppercase
   #    vars:
