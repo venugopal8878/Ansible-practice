@@ -15,7 +15,7 @@
    - name: #lowercase
      vars:
       name: "VENU"
-     ansible.builtin.package:
+     ansible.builtin.debug:
       msg: "{{ name | lower }}"
 
    - name: #unique number
