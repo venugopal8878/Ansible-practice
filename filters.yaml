@@ -1,5 +1,5 @@
 - name: #demo of using filters
-  hosts: [local]
+  hosts: local
   connection: local
   tasks:
    - name: #default value
