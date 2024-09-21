@@ -31,6 +31,7 @@
   - name: #dic2items
     vars:
      course: "devops with siva"
+     duration: 120
     ansible.builtin.debug:
      msg: "{{ course | dict2items }}"
   - name: convert list to map
