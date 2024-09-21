@@ -3,7 +3,7 @@
   connection: local
   tasks:
    - name: #default value
-      ansible.builtin.debug:
+     ansible.builtin.debug:
        msg: "{{ course | default ('ansible')}}"
 
    - name: #uppercase
